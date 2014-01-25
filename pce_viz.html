@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dry Cleaner Viz</title>
+	
+		<!--Sets Google font-->
+		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		
+		  <!--Set up the CSS styles-->
+			<style type="text/css">
+			html { 
+				height: 100%;
+			}
+		  
+			body {
+				height: 100%; 
+				background-color: #fff;
+			}
+			
+			<!--h1 {
+				padding-left: 2%;
+				<!--margin-left: 1%;
+				margin-bottom: -20px;
+				font-family: 'Arvo', serif;
+			}-->
+			
+			h1 {
+				font-family: 'Oswald', sans-serif;
+				font-weight: 700;
+				line-height: 51px;
+				font-size: 46px;
+				padding-top: 25px;
+				text-align: center;
+				<!--text-transform: uppercase;-->
+			}
+			
+			<!--h2 {
+				padding-left: 2%;
+				<!--margin-left: 1%;
+				margin-bottom: -20px;
+				font-family: 'Arvo', serif;
+			}-->
+			
+			h2 {
+				font-family: 'Oswald', sans-serif;
+				font-weight: 500;
+				margin-bottom: 10px;
+				<!--line-height: 51px;
+				font-size: 24px;
+				text-transform: uppercase;
+				<!--padding-bottom: 20px;-->
+			}
+			
+			h3 {
+				font-family: 'Oswald', sans-serif;
+				margin-bottom: -1px;
+			}
+	
+			
+	
+			<!--#introblock {
+				background: #F0F0F0;
+				opacity: 1.0;
+			}-->
+			<!--#infoimage {
+				height: auto;
+				width: 250px;
+			}-->
+		  
+			#introtext {
+				padding-left: 25px;
+				padding-right: 25px;			
+				padding-top: 25px;
+				font-family: 'Arvo', serif;		
+				font-size: 17px;
+			}
+			
+			.dropcap { 
+				float: left; color: #903; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Arvo; }
+				
+			div.horizontalrule {
+				min-height: 1px;
+				clear:both; width:80%;
+				border-bottom:1px solid #d1d1d1;
+				height:1px; padding-top:5px;
+				margin-top:5px;
+				margin-bottom:5px;
+				margin-left: 10%;
+			}
+
+
+
+			
+			#narrativecontainer {
+				width: 33%;
+				height: 60%;
+				float: right;
+				margin-top: 25px;
+				margin-right: 5px;
+				margin-left: 5px;
+			}
+			
+			#narrativescroll {
+				height: 100%;
+				overflow: auto;
+			}
+			
+			#narrative {				
+				<!--style: overflow-y: scroll; -->
+				height: 100%;
+				width: 100%;
+				font-family: 'PT Sans', sans-serif;
+			}
+			
+			#footer {
+				padding-left: 25px;
+				padding-right: 25px;
+				padding-bottom: 25px;
+				font-family: 'Arvo', serif;
+			}
+			
+			#maplegenddiv {
+				width: 60%;
+				float: left;
+				margin-left: 25px;
+				margin-bottom: 25px;
+			}
+			
+			ul#maplegend {
+				width: 100%;
+				text-align: left;
+			}
+			
+			ul#maplegend li {
+				font-family: 'PT Sans', sans-serif;
+				list-style: none;
+				display: inline-block;
+				padding-right: 15px;
+			}
+						
+			/*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
+			#map { 
+				float: left;
+				height: 60%;
+				width: 60%;
+				margin-top: 25px;
+				margin-left: 25px;
+				border-right-width: 2px;
+				border-right-color: #ccc;
+				border-right-style: solid;
+				border-left-width: 2px;
+				border-left-color: #ccc;
+				border-left-style: solid;
+				border-top-width: 2px;
+				border-top-color: #ccc;
+				border-top-style: solid;
+				border-bottom-width: 2px;
+				border-bottom-color: #ccc;
+				border-bottom-style: solid;
+			}
+		
+		  
+			.mapsheet-popup {
+				font-family: 'PT Sans', sans-serif; 
+				<!--font-weight: 400;
+				opacity: 1.0;
+				line-height: 15px;
+				color: #000000;-->
+			}
+				a:link {text-decoration: none;}
+				a:hover {color: red;}
+    </style>
+
+    <body>
+	
+
+
+	<h1>Dry Cleaner Viz</h1>
+	<div id="introtext"><p><span class="dropcap">P</span>CE (short for perchloroethylene or tetrachloroethylene) is a chemical known to be toxic, a probable carcinogen that also has non-cancer health effects. Risks associated with PCE are due both to its toxicity and to the fact that PCE is found at locations where people are exposed – near businesses, schools and homes – because that is where dry cleaners that used PCE were located.</p>
+
+<p>PCE risks are made worse because PCE does not break down when spilled. It is dense, heavier than water, and sinks as it penetrates metal, concrete, soil and reaches groundwater. PCE spreads rapidly and can pool and collect underground – remaining volatile and able to cause harm for decades if not removed or neutralized. A dry cleaner or other source may close, but spilled PCE, not dissolving in water, can continue to harm soil, water and air as vapors seep up from the ground.</p>
+
+<p>Years ago, government health authorities focused mostly on the risk of people drinking PCE-contaminated water. But in Colorado and other urban areas, most residents rely on public water supplies that are heavily treated and tested. PCE contamination of wells remains a threat because well operators typically do not test for PCE.</p>
+
+<p>Now health authorities say they are most concerned about the potential of PCE to reach people through air as PCE vapors seep into homes and worksites. This vapor intrusion pathway is not well understood and state and federal agencies do not know how many homes and worksites may be contaminated. The challenge has been identifying PCE sites in the first place because plumes are hidden underground. Inhaling PCE is considered a problem in densely-populated urban communities where dry cleaners were located every few blocks and gases enter through basements.</p>
+ 
+<p>While human health epidemiology and cancer studies have not been done in Colorado and other states, health effects of PCE are established by the U.S. Environmental Protection Agency and other authorities. Long-term inhalation (7 years or longer) of PCE may harm the central nervous system, including the brain, as well as the kidneys, liver, immune and blood systems, and development and reproduction. The central nervous system is the most sensitive to PCE, which can cause changes in vision, increased reaction time, and reduced cognition. PCE has caused cancer in animals exposed to high concentrations for their entire life. Studies of people who use PCE as part of their jobs have not found cancer. The EPA in 2012 conducted a re-assessment of PCE and concluded it is likely to cause cancer in people exposed at elevated levels over time.</p>
+</div>
+
+<div class="horizontalrule"> </div>
+
+
+	  <!-- This is where the map will go -->
+    <div id="map">
+	</div>
+	
+
+
+
+<div id="narrativecontainer">
+<div id="narrativescroll">
+<div id="narrative">
+<h2 style="color:#903; text-align:center;">Narratives</h2>
+<div id="a1stop">
+<h3>A-1 Stop Laundry Cleaners</h3>
+<em>11815 W. Colfax Ave., Lakewood 80215</em>
+<p>A 2005 CDPHE assessment of PCE contamination identified an underground plume extending from the former A1 Stop Cleaners “beneath the Daniels Park neighborhood and terminating at Lakewood Gulch.” The plume flows south from Colfax and crosses under West Pleasant Avenue, with PCE levels in the groundwater measured at greater than 500 ppb as far as four blocks south of Colfax. PCE levels in the Lakewood Gulch area were measured at 200 to 499 ppb.  The PCE levels were highest under former dry cleaning machines. Indoor air testing was ordered, records show. “With the exception of one residence, concentrations of all volatile organic compounds in indoor air at select homes within the identified groundwater plume are below the CDPHE’s risk-based action levels.” In 2006, responsible parties submitted a corrective action plan to address soil and groundwater contamination resulting from dry cleaner operations at the site. A former owner of the property died, leaving heirs to perform required activities. The proposed work included indoor air tests and remediation consisting of removal and off-site disposal of structures, debris and contaminated soil. It also included injection of chemicals to try to neutralize contamination in groundwater. A January 2009 report said that, in 2007, 16,700 gallons of a potassium permanganate solution was injected. A new owner purchased the property in 2010. It is unclear from CDPHE records whether air testing has been done since 2007. And there may have been problems with the effort to neutralize PCE in groundwater using the chemical injection. PCE levels in groundwater on and off the site in 2008 still exceeded limits. “Temporary reductions in PCE concentrations appear to last less than six months before PCE groundwater concentrations rebound,” a 2009 site report said. “Site monitoring indicates that PCE concentrations have rebounded to concentrations at or above pre-injection levels.” The CDPHE documents addressing this site noted that PCE has contaminated numerous dry cleaner sites in Colorado. “The primary pathway for potential human exposure at these sites is through inhalation of contaminated indoor air.”</p>
+</div>
+<div id="aaamodern">
+<h3>AAA Modern Dry Cleaning, Inc.</h3>
+<em>2401 North Ave., Grand Junction 81501</em>
+<p>Two former dry cleaners were located in the Teller Arms Shopping Center in Grand Junction, operating from 1970 to 1988, according to CDPHE records. This site is located near a Veterans Administration hospital and a golf course. Dry cleaner operations were discontinued in 1988 when the U.S. Department of Energy began work to cleanup toxic uranium mill tailings buried at the site. The PCE contamination discovered at this site is thought to have been the result of dry cleaning operations before 1988. A cleanup plan in place in 2008 referred to PCE contamination of groundwater at up to 89 ppb in 2007 and up to 212 ppb in 2008. CDPHE documents say PCE at the site reached a shallow aquifer. Along with the cleanup efforts, a covenant was placed on the site in 2009 restricting removal of groundwater and soil – to prevent exposure of people to PCE.</p>
+</div>
+<div id="bsnewlook">
+<h3>B's New Look Cleaners</h3>
+<em>992 S. Peoria St., Aurora 80012</em>
+<p>CDPHE files show awareness of a problem that may have been threatening infants and toddlers starting in 2008. “Both soil and groundwater are contaminated with the dry cleaning solvent PCE as a result of either poor housekeeping practice and/or the mismanagement of hazardous waste,” CDPHE’s Walter Avramenko wrote in a letter to the property owner. The dry cleaner operator had vacated the site, leaving the property owner responsible. “The indoor air samples measured very high levels of PCE within the tenant space occupied by the Children’s Chalet day care facility – concentrations that far exceed our health-based action levels.”</p>
+<p>A PCE-removal system was installed in January 2012 for continuous removal of vapors seeping into the day care center. CDPHE officials also verified, at the time that a distance of 25 feet on the roof separated the top of that PCE venting system with an HVAC system air-intake vent for the strip mall.</p>
+<p>The PCE is thought to have spilled from dry cleaning machinery adjacent to the day care center, a part of the building that the center now occupies. Lab tests in 2008 measured PCE levels in groundwater from 6 ppb to 29 ppb. Air monitoring once a year is required under the state’s corrective action plan.</p>
+</div>
+<div id="burke">
+<h3>Burke Cleaners</h3>
+<em>5635 Boeing Drive, Loveland 80538</em>
+<p>The use of PCE at this facility ceased in October 2012 and PCE waste no longer is generated, according to CDPHE records. The current status of the cleanup was unclear.</p>
+</div>
+<div id="chos">
+<h3>Cho's Custom Cleaners</h3>
+<em>7533 W. 80th Ave., Arvada 80003</em>
+<p>Cho’s Custom Cleaners occupied one of the units in the Lake Arbor Shopping Center in Arvada. Cho’s was evicted after property investigations in 2006 revealed PCE contamination in groundwater, CDPHE records show. A plume of PCE-contaminated groundwater has been migrating south under a driveway entrance and parking lot. CDPHE has recommended investigation of potential PCE vapor intgrusion into adjacent units in the shopping center including a computer shop and a travel agency. The Cho’s floor was coated with an epoxy seal. Record show not PCE vapors have been detected in indoor air at the site. A PCE vapor removal system was installed at one unit over the plume. Injection of nutrients may be helping to break down PCE in soil – food-grade molasses intended to nourish bacteria breaking down spilled PCE. The injections were done in 2010 and 2011. A potassium permanganate slurry had been injected previously in 2008. A site monitoring report in 2012 showed PCE contamination at levels up to 1800 ppb.</p>
+</div>
+<div id="cleanerexpress">
+<h3>Cleaner Express</h3>
+<em>435 E. Main St., Aspen 81611</em>
+<p>PCE is thought to have been dumped down a drain, contaminating soil in the middle of Aspen. A Nov. 8, 2007 test of liquid found at the base of the drain found PCE at 4,100 ppb and in a bucket of water at 34,000 ppb. PCE levels in soil reached up to 110,000 ug/kg – well above CDPHE’s “commercial soil remediation objective” at the time of 36,000 ug/kg. CDPHE records say brisk business was done at this dry cleaner - the only plant in the Aspen area. The property was home to a gas station 1955-1970 with underground storage tanks that were removed in 1998. A dry cleaner has been operating at the site since 1986. The dry cleaner in 2007 was using about 200 gallons of PCE a year. CDPHE files indicate 24 drums (30-gallons each) of sludge were generated each year. The worst contaminated soils were excavated in 2008 and tests found no evidence PCE in soil reached groundwater - or municipal wells within 1000 feet of the dry cleaner or the Roaring Fork River, which runs 930 feet northeast of the dry cleaner. A PCE vapor-removal system was installed in the dry cleaner and, starting in May 2010, reduced PCE levels in air inside the dry cleaner to less than the limit.</p>
+</div>
+<div id="fox">
+<h3>Fox Cleaners</h3>
+<em>6700 S. Parker Road, Suite B, Aurora 80016</em>
+<p>State investigations around the intersection of Parker Road and Arapahoe Road found PCE contamination of groundwater at levels up to 2000 ppb in January 2009. CDPHE files show that a water supply well in the area raised concerns. The site at some point held three underground storage tanks but that authorities traced the PCE to a former Fox Cleaners that operated from around 1970 through 2008. PCE seeped through soil and reached groundwater at a depth of about 16 feet beneath the surface. An area where dry cleaning machines were located became the focus for testing and eleven monitoring wells were established. PCE was detected in numerous wells and a 2009 Colorado Department of Transportation chart shows PCE levels as high as 2000 ppb in 2009.</p>
+</div>
+<div id="friscotenmile">
+<h3>Frisco Ten Mile Drive LLC</h3>
+<em>833 Summit Blvd., Frisco 80443</em>
+<p>During investigation of spills from a gas station in Frisco, an environmental firm found PCE, normally associated with dry cleaners, and reported this in a 2004 letter to CDPHE. A Cozy Cleaners operated at the site from 1991 to 1996, state records show. PCE in groundwater was flowing in an underground plume toward a potable well near condos. Tests of well water did not detect PCE at levels above state limits. CDPHE records referred to groundwater tests done in May 2013 that found PCE levels in four of five wells, at levels up to 101 ppb, with levels increasing at three wells.</p>
+</div>
+<div id="gandkservice">
+<h3>G &amp; K Service Incorporated</h3>
+<em>999 Vallejo St., Denver 80204</em>
+<p>A commercial laundry service, G and K Service sits across the street from the Katzson Brothers site – just east of I-25 and north of 8th Avenue – located in the flood plain of the South Platte River, which runs 1,300 feet to the west of the property – an industrial building built in the 1940s and 1960s. G and K supplied and laundered uniforms including food service uniforms, linens, towels, soiled garments -  - up to 391,000 pounds a week. PCE was used as a cleaning agent. Native alluvial sand and gravel sits under about eight feet of fill material at the site.</p>
+<p>A 1993 letter to CDPHE said “we are not planning on installing an air stripper” and asserted that PCE contamination detected under the property was “coming from off-site.” Site remediation work was proposed as early as 1990.</p>
+<p>Sewer line sampling done in the late 1990s by the Metro Wastewater Reclamation District found PCE at levels up to 2380 ppb. In October 2005, groundwater sampling found PCE at levels as high as 6000 ppb, according to CDPHE records. At the site, “the spilling and boiling over of PCE resulted in significant quantitites of PCE-laden wash water entering floor drains,” a November 2005 consultant’s report said. Floor drains and piping in the area were “inadequate to prevent PCE from leaking into the soil.” PCE also seeped through concrete. CDPHE is overseeing this cleanup site while the federal EPA oversees the cleanup at the Katzson Brothers site.</p>
+</div>
+<div id="golfacres">
+<h3>Golf Acres Laundry</h3>
+<em>1528 N. Hancock Ave., Colorado Springs 80907</em>
+<p>A golf course sites down from this site and CDPHE compliance unit chief Walter Avramenko in 1998 sought information from Colorado Springs officials on whether groundwater was used to water greens, “which may cause the plume to be drawn to the surface thereby allowing exposure to the solvent,” according to a letter in CDPHE files. An unknown quantity of PCE was spilled at the site in 1997, spreading to soil and reaching groundwater. The levels in groundwater were measures at “tens times the state groundwater standard.” Tests in 2007 found PCE in groundwater at up to 42 ppb, records show. And in 2010 Colorado Springs officials proposed “to complete remediation of the 1997 PCE release through monitored natural attenuation.” In 2011, tests showed PCE levels decreasing to around 6 ppb. A November 2011 letter from CDPHE to Colorado Springs officials noted PCE levels in monitoring wells only slightly above the state standard at the time of 5 ppb and that “the plume appears to be continuing to naturally attenuate.”</p>
+</div>
+<div id="holiday">
+<h3>Holiday Cleaners, Inc.</h3>
+<em>1251 N. 3rd St., Grand Junction 81501</em>
+<p>A 2011 site report said Holiday was run as a dry cleaning facility where the use of PCE was discontinued in July 2008. Indoor air samples measured at the dry cleaner building found PCE levels exceeding the residential indoor air standard but not the commercial industrial air standard. The main pathway of concern, CDPHE documents show, is from contaminated groundwater in a shallow aquifer. “The deeper aquifer beneath the site does not appear to be impacted.” No municipal pumping wells were observed in the area. Groundwater tests in 2004 found PCE at levels up to 4,668 ppb. In April 2010, tests found PCE at 1,590 ppb.</p>
+</div>
+<div id="lamplighter">
+<h3>Lamplighter Cleaners, Inc.</h3>
+<em>1678 N. Main St., Longmont 80501</em>
+<p>CDPHE records indicated Lamplighter cleaners in 2012 was operating using PCE as a solvent in second-generation machines. Groundwater tests in 2011 found PCE at levels up to 111 ppb, up from 13 ppb in 2010. The site was vacant in 1955. In 1972, structures were built including gas stations and a dry cleaner. The PCE plume did not spread beyond property limits. The records show that a consultant proposed placement of a restrictive deed prohibiting use of groundwater on the property.</p>
+</div>
+<div id="newmethod">
+<h3>New Method Dry Cleaners</h3>
+<em>1653 S. College Ave., Fort Collins 80525</em>
+<p>The New Method Cleaners site was farmland until the 1960s, and dry cleaners were established in the 1970s. PCE contamination was found during site investigations in 2007, CDPHE records show. Shops in the area include a barber show and bakery. Leaks and spills inside the dry cleaner are suspected as the cause of contamination. Groundwater tests in 2009 found PCE at up to 2730 ppb. The records show PCE levels decreasing to 340 in 2010 and to 58 ppb in 20ll.</p>
+</div>
+<div id="remdevelopment">
+<h3>REM Development, Inc.</h3>
+<em>601 Main St., Longmont 80501</em>
+<p>PCE contamination at this site, long used for residential purposes, was first detected in 1989. Some contaminated soil was excavated and a monitoring well was installed. Gas stations and dry cleaners have been located in the area and the site is bordered by the Longmont Christian School. Senior citizens reside at the Village Place at Longmont – a 72-unit complex. Groundwater sampling has been done to verify that PCE contamination of groundwater was below state limits.</p>
+</div>
+<div id="shalom">
+<h3>Shalom Cleaners</h3>
+<em>4585 Austin Bluffs Parkway, Colorado Springs 80918</em>
+<p>CDPHE authorities first became aware of contamination at this former dry cleaners site in 2008 – with PCE levels “at a concentration ten times the Colorado groundwater standard” at the time, records show. “This contaminated groundwater migrates off-site and enters a residential area within which are found a number of private groundwater wells that could potentially be affected” and the result could be “unknowing exposure to PCE.” The site is adjacent to the Austin Bluffs Center built in 1977 near a Skate City rink and Doherty High School. The Shalom Cleaners sat immediately adjacent to a Heart of Jerusalem Restaurant. When a cleanup plan was hashed out in 2010, several dry cleaners at the site were mentioned including Kings One-Hour, J.S. Cleaners and Shavon Cleaning – all occupants of the space since 1982.</p>
+<p>State officials notified a trust that owned the site. Groundwater tests in 2009 found PCE levels up to 51 ppb.  CDPHE ordered tests of a dozen or so private wells within 1300 feet of the suspected source area. CDPHE ordered installation of a PCE vapor removal system by August 2012.</p>
+<p>The site owner responsible for cleanup faced financial uncertainty in 2010, and CDPHE’s Walter Avramenko worked carefully to prevent abandonment of the site. Avramenko told the owner in 2010 that “I understand your resources are limited and the site does not currently generate sufficient revenue. On the other hand, please recognize the Hazardous Materials and Waste Management Division’s obligation to ensure cleanup as soon as possible.” In an email, Avramenko commended the onwer’s willingness “to resume work…. To take care of the problems within your limited financial means.” He noted that CDPHE was “preparing to take legal action,” referring to a consultant’s estimate that full cleanup to meet health standards would cost “hundreds of thousands of dollars.” The owner’s decision to halt cleanup work in early 2009 resulted “because the required money to complete the work was not available,” the email said. “Please note there are many contractors who might be able to assist in the cleanup of the property, don’t let one quite dissuade you from continuing your efforts.” CDPHE broached the possibility of a cooperative approach. “Following issuance of the unilateral order, we would be willing to discuss terms of an order on consent, negotiated with you, that could replace the unilateral order.”</p>
+<p>In 2011, efforts to contact private well owners were partially successful but, of the 12 tests done, only 2 detected PCE contamination. The level in one well was 37 ppb. CDPHE records show continued efforts to find the source of the contamination – a 2011 camera inspection of sewer lines leading from Shalom Cleans found a low spot where PCE formed a pond. It was unclear whether the PCE vapor removal system would fully solve the problem.  A 2012 CDPHE letter refers to “the widespread nature of PCE contaminated groundwater.”</p>
+</div>
+<div id="silverstate">
+<h3>Silver State Cleaners</h3>
+<em>6460 E. Yale Ave., Denver 80222</em>
+<p>A dry cleaners operated at the site from 1975 to 1992, CDPHE records show. Silver State in 1986 was registered with EPA as a hazardous waste generator. An environmental services company found PCE contamination in shallow soil in 2008. PCE levels detected in groundwater at the site increased from 9500 ppb in 2008 to 11500 in 2010, records show. The underground plume extends to an area abutting a Safeway property.</p>
+</div>
+<div id="smileys">
+<h3>Smiley's Cleaners</h3>
+<em>1080 E. Colfax Ave., Denver 80218</em>
+<p>PCE was detected in 2005 at low concentrations in groundwater under the Smiley’s Laundromat site east of downtown Denver along Colfax Avenue. CDPHE records show PCE was not detected in soil and that there’s been no exact source identified. Groundwater sampling has been done. “CDPHE agreed that the low concentrations of PCE detected represent a limited risk to human health or the overall state of the environment along this stretch of Colfax Avenue.”</p>
+</div>
+<div id="solarclean">
+<h3>Solar Clean Wash 'N' Dry</h3>
+<em>175 Pagosa St., Pagosa Springs 81147</em>
+ <p>From 1975 to 1991, a retail dry cleaner called Solar Wash ‘N’ Dry was operated in the Solar Mall, located in Pagosa Springs near shops and a residential area. It used PCE. Bank investigations after a foreclosure led to removal of a dry cleaning machine around 1996. When contractors moved it, 3-5 gallons of PCE spilled on the floor and drained out through cracks. Soil tests found heavy PCE contamination of soil under the building, and tests found PCE levels in groundwater down from the building as high as 6000 ppb. CDPHE records indicate authorities believe contamination may have been the result of more than the 1996 spill. The PCE levels were high enough that CDPHE ordered installation of a PCE vapor removal system in 1997 and indoor air tests at three residences. Air tests done in 2000 found PCE contamination of indoor air in one living room at the level of 3 micrograms per cubic meter – just below the health standard at that time. (The standard since then has been relaxed to 41 ppb.)  Priorities under a corrective action plan established in 2000 included indoor air monitoring, injection of potassium permanganate to try to reduce groundwater contamination and preventing the toxic plume from spreading. Trenches were dug to try to block the plume by treating PCE-laced groundwater. A 2001 CDPHE letter to investors who now own the property noted that PCE levels in groundwater have decreased from up to 600 ppb in 2006 to about 100 in 2011.</p>
+</div>
+<div id="sundance">
+<h3>Sundance Cleaners</h3>
+<em>1119 Lincoln Ave., Steamboat Springs 80487</em>
+<p>A dry cleaner operated since at least 1980 at this site, which was developed as a multi-tenant office and retail center, where a plume of PCE-contaminated groundwater is being monitored. CDPHE records show that the water table sits one to 18 feet beneath the surface and that the location is near the Yampa River. Groundwater tests in 2010 show PCE at levels up to 150 ppb. A site report refers to an approach of “monitoring and natural attenuation” for addressing the plume.</p>
+</div>
+</div>
+</div>
+</div>
+
+	<div id="maplegenddiv">
+		<ul id="maplegend">
+			<li><img src="blue_dot_24.png">&nbsp;Narrative</li>
+			<li><img src="orange_dot_16.png">&nbsp;No Narrative</li>
+		</ul>
+		</div>
+
+<div class="horizontalrule"> </div>
+
+<div id="footer">icons by <a href="http://www.icons-land.com/">Icons Land</a>
+</div>
+
+	
+	<!-- We'll need to include Google Maps, Handlebars for templating, and jQuery for general futzing about -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- Tabletop.js for accessing Google Spreadsheets and Mapsheet.js for mapping, of course -->
+		<script type="text/javascript" src="tabletop.js"></script>
+		<script type="text/javascript" src="mapsheet.js"></script>
+		
+		<!--Can't get smooth scrolling to work-->
+		<script type="text/javascript" src="smoothscroll.js"></script>
+		
+		<!-- This is the popup you'll get when you click a marker. 
+         {{these}} are columns in your spreadsheet -->
+    <script id="popup-template" type="text/x-handlebars-template">
+      <img src="{{image}}">
+      <h3>{{name}}</h3>
+      <p>{{address}}</p>
+	  <hr />
+	  <p><a href="{{link}}" class="smoothScroll">{{narrative}} </a></p>
+    </script>
+
+    <!-- Okay, time to do this! -->
+    <script type="text/javascript">
+      $(document).ready( function() {       
+        // Make sure the spreadsheet is published!
+        var published_spreadsheet_url = 'https://docs.google.com/spreadsheet/ccc?key=0AtVsEW-ZbKySdGZCb3FYQ1FJcXB2Nkh4N2lieTNmeXc&usp=drive_web#gid=0'; 
+
+        // Let's get the popup template and compile it using Handlebars
+        var source   = $("#popup-template").html();
+        var template = Handlebars.compile(source);
+
+        // OK, now let's make the map
+        var map = Mapsheet({
+          key: published_spreadsheet_url,
+          element: "map",
+          popupTemplate: template
+        });
+      });
+    </script>
+  </body>
+</html>
